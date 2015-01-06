@@ -1,0 +1,23 @@
+#include <iostream>
+#include "fielding.h"
+
+void fielding() {
+    double chances, put_outs, assists;
+	std::cout << "Please enter the number of Total chances: ";
+	std::cin >> chances;
+	std::cout << std::endl << "Please enter the number of Put-outs: ";
+	std::cin >> put_outs;
+	std::cout << std::endl << "Please enter the number of assists: ";
+	std::cin >> assists;
+
+    double attempts = put_outs + assists;
+	double fieldingpercent = attempts / chances;
+	double errors = chances - attempts;
+
+	std::cout << "STATS: " << std::endl << "Chances: " << chances;
+	std::cout << std::endl << "Put-outs: " << put_outs;
+	std::cout << std::endl << "Assists: " << assists;
+	std::cout << std::endl << "Successful attempts: " << attempts;
+	std::cout << std::endl << "Fielding Percent: " << fieldingpercent;
+	std::cout << std::endl << "Errors: " << errors << std::endl;
+}
