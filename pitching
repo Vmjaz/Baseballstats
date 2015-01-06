@@ -1,0 +1,20 @@
+#include <iostream>
+#include "pitching.h"
+pitching::pitching() {
+    double games_started, wins, losses;
+	std::cout << "Please enter the number of Games Started: ";
+	std::cin >> games_started;
+	std::cout << std::endl << "Please enter the number of Wins: ";
+	std::cin >> wins;
+	std::cout << std::endl << "Please enter the number of losses: ";
+	std::cin >> losses;
+	double decisions = wins + losses;
+	double winningpercentage = wins / decisions;
+	double no_decisions = games_started - decisions;
+	std::cout << "STATS: " << std::endl << "Games started: " << games_started;
+	std::cout << std::endl << "Wins: " << wins;
+	std::cout << std::endl << "Losses: " << losses;
+	std::cout << std::endl << "Decisions" << decisions;
+	std::cout << std::endl << "Winning Percentage" << winningpercentage;
+	std::cout << std::endl << "No Decisions" << no_decisions << std::endl;
+}
