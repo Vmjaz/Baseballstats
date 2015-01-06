@@ -1,0 +1,21 @@
+#include <iostream>
+#include "hitting.h"
+
+hitting::hitting() {
+    double plateappearance, hits, battedout;
+	std::cout << "Please enter the number of plate appearances: ";
+	std::cin >> plateappearance;
+	std::cout << std::endl << "Please enter the number of hits: ";
+	std::cin >> hits;
+	std::cout << std::endl << "Please enter the number of batted outs: ";
+	std::cin >> battedout;
+	double at_bats = hits + battedout;
+	double battingavg = hits / at_bats;
+	double walk = plateappearance - at_bats;
+    std::cout << "STATS: " << std::endl << "Plate Appearances: " << plateappearance;
+	std::cout << std::endl << "Hits: " << hits;
+	std::cout << std::endl << "Batted Out: " << battedout;
+	std::cout << std::endl << "At Bats: " << at_bats;
+	std::cout << std::endl << "Batting Average: " << battingavg;
+	std::cout << std::endl << "Walk: " << walk << std::endl;
+}
